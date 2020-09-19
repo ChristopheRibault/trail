@@ -3,10 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
+  devServer: {
+    contentBase: './dist',
+    port: 3000,
+  },
   plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new HtmlWebpackPlugin({
+      title: 'trail',
+    }),
   ],
   output: {
     filename: 'bundle.js',
