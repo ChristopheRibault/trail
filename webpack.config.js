@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   mode: 'development',
@@ -15,6 +16,7 @@ module.exports = {
       title: 'trail',
       template: 'index.html',
     }),
+    new VueLoaderPlugin(),
   ],
   output: {
     filename: 'bundle.js',
@@ -27,6 +29,12 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.vue$/,
+        use: [
+          'vue-loader',
+        ],
+      },
       {
         test: /\.css$/,
         use: [
