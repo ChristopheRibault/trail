@@ -1,15 +1,23 @@
-import _ from 'lodash';
-import './style.css';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-function component() {
-  const element = document.createElement('div');
+import { Home, Info } from './pages';
+import App from './App';
 
- // Lodash, currently included via a script, is required for this line to work
- // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+Vue.use(VueRouter);
 
-  return element;
-}
+const routes = [
+  { path: '/', component: Home },
+  { path: '/info', component: Info }
+];
 
-document.body.appendChild(component());
+const router = new VueRouter({
+  routes,
+});
+
+new Vue({
+  el: "#app",
+  components: { App },
+  template: '<App></App>',
+  router,
+})
