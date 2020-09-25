@@ -1,5 +1,13 @@
-import Header from './Header.vue';
+import HeaderContainer from './HeaderContainer.vue';
+import Navbar from './Navbar.vue';
+import NavbarBtn from './NavbarBtn.vue'
+import MainTitle from './MainTitle.vue';
+import DateTrail from './DateTrail.vue';
 
 export {
-  Header,
+  HeaderContainer,
+  Navbar,
+  NavbarBtn,
+  MainTitle,
+  DateTrail,
 };

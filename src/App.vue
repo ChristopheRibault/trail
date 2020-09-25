@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Header></Header>
+    <header-container></header-container>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import { Header } from './components';
+  import { HeaderContainer } from './components';
 
   const App = {
     components: {
-      Header
+      HeaderContainer,
     },
   };
 

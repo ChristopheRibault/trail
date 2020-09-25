@@ -23,6 +23,8 @@
     "css-loader": "^4.3.0",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
@@ -31,7 +33,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "lodash": "^4.17.20",
+    "moment": "^2.28.0",
     "vue": "^2.6.12",
     "vue-router": "^3.4.3"
   }
